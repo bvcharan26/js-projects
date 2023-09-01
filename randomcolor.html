@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Color Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .container .heading {
+      font-weight: 500;
+      font-size: 50px;
+      margin-top: 200px;
+    }
+    .container .btn {
+      margin-top: 100px;
+      width: 150px;
+      border: none;
+      background-color: black;
+      height: 50px;
+    }
+  </style>
+</head>
+<body id="rand">
+  <section>
+    <div class="container text-center">
+      <div class="heading">
+        <mark style="background-color: black; color: white;">Background Color Generator</mark>
+      </div>
+      <button class="btn btn-primary" onclick="change()">CLICK ME</button>
+    </div>
+  </section>
+  <script>
+    function change() {
+      var x=(Math.random()*1000)%255;
+      var y=(Math.random()*1000)%255;
+      var z=(Math.random()*1000)%255;
+      var o=(Math.random()*10); 
+      var rgb = 'rgba(' + x + ',' + y + ',' + z + ',' + o + ')';
+      document.getElementById('rand').style.backgroundColor = rgb;
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
